@@ -23,7 +23,7 @@
   <!--/ko-->
   <!-- ko if: online-->
   <button data-bind="click: logout">Logout</button>
-  <input id="addTodo" type="text" /><button data-bind="click: addTodoItem($('#addTodo').val())">Add</button>
+  <input data-bind="value: todo" type="text" /><button data-bind="click: addTodoItem">Add</button>
   <!--/ko-->
 
 

@@ -33,6 +33,7 @@ $(function () {
       // Parent constructor
       User.apply(this, [args[0], args[1], args[2]]);
 
+      this.todo = ko.observable('');
       this.todoList = ko.observableArray(['bring peace to the world!']);
     }
 
@@ -40,8 +41,11 @@ $(function () {
     Admin.prototype = Object.create(User.prototype);
 
     // Method
-    Admin.prototype.addTodoItem = function (todo) {
-      if (todo) this.todoList.push(todo);
+    Admin.prototype.addTodoItem = function () {
+      if (this.todo() !== '') 
+        this.todoList.push(this.todo());
+
+      this.todo('');
     }
 
 
