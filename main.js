@@ -2,7 +2,6 @@ $(function () {
 
     // Parent class 
     // This is just to show how to write a class funciton in javascript
-    // and how inhertiance works.
     function User(firstName, lastName, email) {
       this.email = email;
       // Observable properties
@@ -37,7 +36,7 @@ $(function () {
       this.todoList = ko.observableArray(['bring peace to the world!']);
     }
 
-    // Extra step to inherite user prototype
+    // Extra step to inherit user prototype
     Admin.prototype = Object.create(User.prototype);
 
     // Method
